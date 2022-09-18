@@ -1,0 +1,25 @@
+Link for the Tinkercad project: https://www.tinkercad.com/things/gZGlEnGBzcx?sharecode=MkzX5xDuSkoYNC77aUTMkH0_TOT_hFkJ4u2fpVnwahU
+
+void setup()
+{
+  pinMode(2,INPUT);
+  pinMode(12,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  if(digitalRead(2)==1)
+  {
+    digitalWrite(12,HIGH);
+    Serial.println("Door open");
+    delay(1000);
+  }
+  else
+  {
+    digitalWrite(12,LOW);
+    Serial.println("Door closed");
+   
+  }
+  
+}
